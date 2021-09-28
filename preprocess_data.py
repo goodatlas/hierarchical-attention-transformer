@@ -42,7 +42,7 @@ flags.DEFINE_string(
 )
 
 ## Other parameters
-flags.DEFINE_string(
+flags.DEFINE_bool(
     "pretrain_mode", False,
     "If you want to run on pre-training mode, please set this parameter True"
 )
@@ -54,7 +54,7 @@ flags.DEFINE_bool(
 )
 
 flags.DEFINE_bool(
-    "share_tokenizer", True,
+    "share_tokenizer", False,
     "Set True if you want to use same tokenizer between encoder and decoder. ",
     "Else, please set tokenizer information for decoder."
 )

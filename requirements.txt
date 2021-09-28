@@ -1,3 +1,4 @@
 tensorflow-gpu==1.15  # GPU version of TensorFlow
 tqdm
 six
+sentencepiece
