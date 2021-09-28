@@ -1,4 +1,5 @@
 import json
+import collections
 import tensorflow as tf
 import sentencepiece as spm
 from tqdm import tqdm
