@@ -105,7 +105,7 @@ def main(_):
         train_examples,
         hat_config_dict["input_length"], hat_config_dict["output_length"],
         encoder_tokenizer, decoder_tokenizer, train_file,
-        is_pretraining=FLAGS.is_pretrain_mode
+        is_pretraining=FLAGS.pretrain_mode
     )
 
 
