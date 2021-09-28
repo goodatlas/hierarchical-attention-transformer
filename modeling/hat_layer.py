@@ -63,7 +63,7 @@ class HATEncoder(tf.keras.layers.Layer):
 
     for i in range(self.num_layers):
       x = self.enc_layers[i](x, training, mask)
-    print("shape of x is {}")
+    print("shape of x is {}".format(x.shape))
     bos_mask = tf.expand_dims(bos_mask, axis=-1)
     hat_x = self.hat_layer(x, training, tf.cast(bos_mask, dtype=tf.float32))
 
