@@ -55,7 +55,7 @@ flags.DEFINE_bool(
 
 flags.DEFINE_bool(
     "share_tokenizer", False,
-    "Set True if you want to use same tokenizer between encoder and decoder. ",
+    "Set True if you want to use same tokenizer between encoder and decoder. "
     "Else, please set tokenizer information for decoder."
 )
 
