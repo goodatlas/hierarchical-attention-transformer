@@ -101,6 +101,7 @@ def main(_):
     
     filename = "pretrain.tf_record" if FLAGS.pretrain_mode else "train.tf_record"
     train_file = os.path.join(FLAGS.intermediate_dir, filename)
+    print("Pretraining mode is... {}".format(FLAGS.pretrain_mode))
     data_pipeline.file_based_convert_examples_to_features(
         train_examples,
         hat_config_dict["input_length"], hat_config_dict["output_length"],
