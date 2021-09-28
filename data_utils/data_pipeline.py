@@ -1,6 +1,7 @@
 import json
 import collections
 import tensorflow as tf
+from tensorflow.contrib import data as contrib_data
 import sentencepiece as spm
 from tqdm import tqdm
 
