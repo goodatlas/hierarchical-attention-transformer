@@ -111,7 +111,7 @@ def main(_):
     logging.info("  Batch size = %d", FLAGS.train_batch_size)
     logging.info("  Num steps = %d", num_train_steps)
     train_input_fn = data_pipeline.file_based_input_fn_builder(
-        input_file=train_file,
+        input_file=FLAGS.trainset_file,
         input_length=hat_config_dict["input_length"],
         output_length=hat_config_dict["output_length"],
         is_training=True,
