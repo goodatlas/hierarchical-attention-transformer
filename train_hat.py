@@ -3,6 +3,7 @@ from __future__ import division
 from __future__ import print_function
 
 import os
+import json
 import pickle
 import collections
 import tensorflow as tf
