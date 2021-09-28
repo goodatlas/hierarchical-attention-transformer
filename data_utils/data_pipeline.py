@@ -4,6 +4,7 @@ import sentencepiece as spm
 from tqdm import tqdm
 
 from data_utils import span_masking
+from data_utils import tokenization
 
 
 class InputExample(object):
