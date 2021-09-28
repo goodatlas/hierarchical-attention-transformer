@@ -117,7 +117,7 @@ class MultiHeadAttention(tf.keras.layers.Layer):
     self.wk = tf.keras.layers.Dense(d_model)
     self.wv = tf.keras.layers.Dense(d_model)
     
-    self.dense = tf.keras.layers.Dense(d_model, activation=modeling.gelu)
+    self.dense = tf.keras.layers.Dense(d_model, activation=gelu)
     
   def split_heads(self, x, batch_size):
     """Split the last dimension into (num_heads, depth).
