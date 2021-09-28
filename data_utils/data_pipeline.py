@@ -73,7 +73,7 @@ def convert_single_example(ex_index, example, input_length, output_length, encod
     return InputFeatures(
         input_ids=[0] * input_length,
         label_ids=[0] * output_length,
-        bos_mask=[0] * output_length,
+        bos_mask=[0] * input_length,
         is_real_example=False)
 
   input_tokens = ['[CLS]']
