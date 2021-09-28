@@ -49,7 +49,7 @@ flags.DEFINE_bool(
 
 flags.DEFINE_bool(
     "do_lower_case", False,
-    "Whether to lower case the input text. ",
+    "Whether to lower case the input text. "
     "Should be True for uncased models and False for cased models."
 )
 
