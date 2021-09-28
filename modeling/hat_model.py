@@ -1,5 +1,6 @@
 import re
 import tensorflow as tf
+from absl import logging
 
 from modeling import attention_utils
 from modeling import hat_layer
