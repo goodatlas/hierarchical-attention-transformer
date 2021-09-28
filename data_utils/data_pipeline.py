@@ -1,4 +1,5 @@
 import json
+import tensorflow as tf
 import sentencepiece as spm
 
 from data_utils import span_masking
