@@ -29,7 +29,7 @@ def span_masking(tokens, coverage=0.15, span_p=0.2, lmax=10):
 
   splitted_tokens = []
   for token in tokens[1:-1]:
-    if token.startswith('_') or token == '[SEP]':
+    if token.startswith('▁') or token == '[SEP]':
       splitted_tokens.append([token])
     elif len(splitted_tokens) > 0:
       splitted_tokens[-1].append(token)
