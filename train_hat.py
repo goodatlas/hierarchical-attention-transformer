@@ -44,11 +44,6 @@ flags.DEFINE_string(
     "init_checkpoint", None,
     "Initial checkpoint. Both pre-trained model and fine-tuned model are possible.")
 
-flags.DEFINE_string(
-    "pretrain_mode", False,
-    "If you want to run on pre-training mode, please set this parameter True"
-)
-
 flags.DEFINE_integer("train_batch_size", 32, "Total batch size for training.")
 
 flags.DEFINE_integer("export_batch_size", 1, "Total batch size for exported model.")
