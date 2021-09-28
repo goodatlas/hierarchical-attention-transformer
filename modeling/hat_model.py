@@ -4,6 +4,7 @@ from absl import logging
 
 from modeling import attention_utils
 from modeling import hat_layer
+from optimizer import optimization
 
 
 def get_assignment_map_from_checkpoint(tvars, init_checkpoint, num_of_group=0):
