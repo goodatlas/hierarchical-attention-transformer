@@ -127,20 +127,20 @@ def main(_):
         reciever_tensors = {
             "input_ids": tf.placeholder(
                 dtype=tf.int64,
-                shape=[FLAGS.export_batch_size, FLAGS.max_seq_length]
+                shape=[FLAGS.export_batch_size, hat_config_dict["input_length"]]
+            ),
+            "bos_mask": tf.placeholder(
+                dtype=tf.int64,
+                shape=[FLAGS.export_batch_size, hat_config_dict["input_length"]]
             ),
             "label_ids": tf.placeholder(
                 dtype=tf.int64,
-                shape=[FLAGS.export_batch_size, FLAGS.max_output_length]
+                shape=[FLAGS.export_batch_size, hat_config_dict["output_length"]]
             )
         }
         features = {
             "input_ids": reciever_tensors['input_ids'],
-            "input_mask": 1 - tf.cast(tf.equal(reciever_tensors['input_ids'], 0), dtype=tf.int64),
-            "segment_ids": tf.zeros(dtype=tf.int64,
-                                    shape=[FLAGS.export_batch_size, FLAGS.max_seq_length]),
             'label_ids': reciever_tensors['label_ids'],
-            'label_mask': 1 - tf.cast(tf.equal(reciever_tensors['label_ids'], 0), dtype=tf.int64)
         }
         return tf.estimator.export.ServingInputReceiver(features, reciever_tensors)
     
