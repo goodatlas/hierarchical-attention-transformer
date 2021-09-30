@@ -139,8 +139,9 @@ def main(_):
             )
         }
         features = {
-            "input_ids": reciever_tensors['input_ids'],
-            'label_ids': reciever_tensors['label_ids'],
+            "input_ids": reciever_tensors["input_ids"],
+            "label_ids": reciever_tensors["label_ids"],
+            "bos_mask": reciever_tensors["bos_mask"]
         }
         return tf.estimator.export.ServingInputReceiver(features, reciever_tensors)
     
