@@ -81,6 +81,8 @@ def main(_):
     if FLAGS.share_tokenizer:
         decoder_tokenizer = encoder_tokenizer
     else:
+        assert FLAGS.decoder_vocab_file, "If you don't want to share tokenizer with encode, please enter decoder_vocab_file"
+        assert FLAGS.decoder_spm_model_file, "If you don't want to share tokenizer with encode, please enter decoder_spm_model_file"
         decoder_tokenizer = tokenization.FullTokenizer(
             vocab_file=FLAGS.decoder_vocab_file,
             do_lower_case=FLAGS.do_lower_case,
