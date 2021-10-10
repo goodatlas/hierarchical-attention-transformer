@@ -1,4 +1,5 @@
 import re
+import collections
 import tensorflow as tf
 from absl import logging
 
